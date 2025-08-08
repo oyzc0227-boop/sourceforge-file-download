@@ -25,8 +25,9 @@ find sourceforge.net/ | sed "s#.*${project}/files/##" | grep download$ | grep -v
 # download each of the extracted URLs, put into $projectname/
 while read url; do wget --content-disposition -x -nH --cut-dirs=1 "${url}"; done < urllist
 
-# remove ?viasf=1 suffix
-find . -name '*?viasf=1' -print0 | xargs -0 rename --verbose "?viasf=1" ""
+# remove ?viasf=1 suffix, roll back to Perl version of "rename" if needed for Ubuntu / Linux Mint
+(find . -name '*?viasf=1' -print0 | xargs -0 rename --verbose "?viasf=1" "") || \
+(find . -name '*?viasf=1' -print0 | xargs -0 rename -v 's/\?viasf=1$//')
 
 # remove temporary files, unless you want to keep them for some reason
 rm -ri sourceforge.net/
