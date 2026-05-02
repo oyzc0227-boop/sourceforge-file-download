@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Download File
-        run: wget -O aosp_arm64-symbols-15212407.zip "https://storage.googleapis.com/android-build/builds/aosp-android13-gsi-linux-aosp_arm64-userdebug/15212407/dc856a504e7f698de7f504aa385c3cdd0b8b3ad7473694f0500df54d744617c6/1/aosp_arm64-symbols-15212407.zip"
+        run: wget -O aosp_arm64-symbols-15212407.zip "https://storage.googleapis.com/android-build/builds/aosp-android13-gsi-linux-aosp_arm64-userdebug/15212407/dc856a504e7f698de7f504aa385c3cdd0b8b3ad7473694f0500df54d744617c6/1/aosp_arm64-symbols-15212407.zip?GoogleAccessId=gcs-sign%40android-builds-project.google.com.iam.gserviceaccount.com&Expires=1777721626&Signature=RSMAoSJajSJGL6DYlQxaZBzO3YOICsn1XgCI5mlHa3WEiEG0qlni5L06mI48733UJdHZF6Vdtdh61wz7CmeHkpENGcX9wmjR0Xmon7Yknp%2B6eh%2B6WAqRSi3o%2FDZepYo7leZLdlDN8ufIZewxZeXsjQ5vuVZ%2FgcP0KFQLc6xjxVHYhIBBvmeELb7Ch7JAEFveb3yqsW6dG%2FU1pJeo9hYkhYQeQi9XDaaayq3gTt8kGPaYu%2BNoN9dPD6ju8tc%2BFbjc9B3HW%2B1Jq5GhEqYy7i1GdO5RACeyuDG1xpLr4W3cYILqUIRL%2FufD%2BbqXecgluhgJXEIHO3CAoSlfXmaEjVg9Pg%3D%3D&response-content-disposition=attachment"
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
