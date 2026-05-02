@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Download File
-        run: wget -O crDroidAndroid-12.1-20221126-merlinx-v8.11.zip "https://sourceforge.net/projects/crdroid/files/merlinx/8.x/crDroidAndroid-12.1-20221126-merlinx-v8.11.zip/download"
+        run: wget -O aosp_arm64-symbols-15212407.zip "https://storage.googleapis.com/android-build/builds/aosp-android13-gsi-linux-aosp_arm64-userdebug/15212407/dc856a504e7f698de7f504aa385c3cdd0b8b3ad7473694f0500df54d744617c6/1/aosp_arm64-symbols-15212407.zip"
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
@@ -44,4 +44,4 @@ jobs:
           name: File
           draft: false
           prerelease: false
-          files: crDroidAndroid-12.1-20221126-merlinx-v8.11.zip
+          files: aosp_arm64-symbols-15212407.zip
